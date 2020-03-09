@@ -17,7 +17,8 @@ let colorPalet;
 var DefB=[];
 
 function preload() {
-  table = loadTable('https://docs.google.com/spreadsheets/d/e/2PACX-1vSpQmll0IN35vyqKtiB31pqcYN2d5a8JBtJi1qw4DnclPhxjefbq9J89rG6C_t1knCMYoo9qrPhcp3S/pub?output=csv', 'csv', 'header');
+	table = loadTable('FormResponses.csv', 'csv', 'header');
+  //table = loadTable('https://docs.google.com/spreadsheets/d/e/2PACX-1vSpQmll0IN35vyqKtiB31pqcYN2d5a8JBtJi1qw4DnclPhxjefbq9J89rG6C_t1knCMYoo9qrPhcp3S/pub?output=csv', 'csv', 'header');
 }
 
 function setup() {
@@ -61,6 +62,7 @@ function setup() {
     } 
 
     //each gender's def words
+    /*
     maleDefs.push(table.getString(r,17).toUpperCase().trim());
     femaleDefs.push(table.getString(r,19).toUpperCase().trim());
     genfluDefs.push(table.getString(r,21).toUpperCase().trim());
@@ -68,6 +70,7 @@ function setup() {
     nongenDefs.push(table.getString(r,25).toUpperCase().trim());
     gqueerDefs.push(table.getString(r,27).toUpperCase().trim());
     transDefs.push(table.getString(r,29).toUpperCase().trim());
+    */
 
     //making an array of all def for gender together (upper case, no space, no duplicate)
     for(var i = 0; i<14; i+=2){
